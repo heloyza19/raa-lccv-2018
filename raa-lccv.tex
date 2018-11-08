@@ -30,14 +30,14 @@
     %------------------------------------------------------
     %\settype{Research \& Development Project}
     % \settype{Research \& Development Activity}
-     %\settype{Research Beginner}
+    \settype{Research Beginner}
     % \settype{Undergraduate Thesis}
     % \settype{Master's Thesis}
     % \settype{Doctoral Thesis}
 
     % DURATION AND STATUS
     %------------------------------------------------------
-    \setduration{ months}
+    \setduration{3 months}
     \setstatus{In progress}
     % \setstatus{Completed}
 
@@ -63,21 +63,22 @@
 
     % INTRODUCTION TEXT AND FIGURE
     %------------------------------------------------------
-    \setintro{The Pinball algorithm is used for the numerical simulation of particle dynamics. It consists of approaching each particle by a polygonal object, the edges of the polygon are filled by balls of very small radius, in which these balls are used to make the contact detection between particles, so that later the acting forces are determined.The contact forces are determined from the penetration between the balls of the edge, through a law of contact that relates penetration and force.\\
-    In order to develop a program capable of simulating the dynamic two-dimensional rigid bodies, the Pinball algorithm was used, considering the particles as rigid bodies, through MATLAB.}
+    \setintro{
+    The submerged structures used in the hydrocarbon exploration process are subject to underwater landslides; which makes it essential to study the impact of these landslides on the structures, through the simulation of this problem.\\
+    It is necessary to make simplifications of the problem in order to simulate the impact of underwater landslides on structures, with two-dimensional analysis, simplifications such as considering all matter as rigid bodies with polygonal sections.\\
+    In view of the presented context, the objective is to develop a program capable of simulating the dynamics of rigid bodies of arbitrary geometry in two dimensions, so that it is possible to analyze the presented problem in a simplified way.
+}
     %------------------------------------------------------
   
 
     % METHODOLOGY TEXT AND FIGURE
     %------------------------------------------------------
-    \setmethodology{In order to simulate the dynamics of rigid bodies in two dimensions, the program was developed through MATLAB so that, first, the center of mass and the moment of inertia of each rigid bodies were determined\\
-    Then, the contact verification between the bodies is performed, using the pinball algorithm, which consists of considering the edges of the object filled with small balls, thus using these balls to determine the contact between the body, the search for contacts between the bodies is performed through the direct mapping of the balls.\\
-  After determining some collision, the contact forces are calculated according to the Force-Displacement Law of the Discrete Element Method.\\
-Thus, knowing the acting forces (external and contact forces), it was possible to simulate all the dynamics of the object through computational techniques.
-    }
+    \setmethodology{
+  The development of the program capable of simulating the dynamics of rigid bodies uses the pinball model, making approximations to simulate the problem, such as considering all matter as rigid bodies with polygonal sections. In considering objects as rigid bodies, there is the simplification of considering that bodies do not deform when forces are applied to them; in addition, the applied forces create rotational and translational movements in the object. Thus, after determining the center of mass and moment of inertia of each object, knowing the acting forces (external and contact forces), the resulting force and torque are calculated to be able to simulate the entire dynamics of the object through computational techniques.\\
+  The Pinball counting model consists of considering the edges of the polygon filled by balls of very small radius, and determining the contacts and forces acting through these balls, applying the law of Force-Displacement of the Discrete Element  Method (DEM).
+}
     %------------------------------------------------------
   
-
     % RESULTS TEXT AND FIGURE
     %------------------------------------------------------
     \setresults{
