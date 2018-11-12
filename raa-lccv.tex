@@ -64,9 +64,7 @@
     % INTRODUCTION TEXT AND FIGURE
     %------------------------------------------------------
     \setintro{
-    The submerged structures used in the hydrocarbon exploration process are subject to underwater landslides; which makes it essential to study the impact of these landslides on the structures, through the simulation of this problem.\\
-    It is necessary to make simplifications of the problem in order to simulate the impact of underwater landslides on structures, with two-dimensional analysis, simplifications such as considering all matter as rigid bodies with polygonal sections.\\
-    In view of the presented context, the objective is to develop a program capable of simulating the dynamics of rigid bodies of arbitrary geometry in two dimensions, so that it is possible to analyze the presented problem in a simplified way.
+    Submerged structures, used in the hydrocarbon exploration process, are often located in regions where landslides are a potential risks. Thus, the study of the impact of these landslides on the submerged structures is essential to the design of the underwater equipments. In order to solve this problem, we will consider, initially, that the structures are rigid bodies with polygonal sections. This will allow the prediction of the body dynamics and the forces acting on it. In this context, the objective of this work is to develop a program capable of simulating the dynamics of rigid bodies of arbitrary geometry in two dimensions, that will be added later to the main program of the project.
 }
     %------------------------------------------------------
   
@@ -74,15 +72,15 @@
     % METHODOLOGY TEXT AND FIGURE
     %------------------------------------------------------
     \setmethodology{
-  The development of the program capable of simulating the dynamics of rigid bodies uses the pinball model, making approximations to simulate the problem, such as considering all matter as rigid bodies with polygonal sections. In considering objects as rigid bodies, there is the simplification of considering that bodies do not deform when forces are applied to them; in addition, the applied forces create rotational and translational movements in the object. Thus, after determining the center of mass and moment of inertia of each object, knowing the acting forces (external and contact forces), the resulting force and torque are calculated to be able to simulate the entire dynamics of the object through computational techniques.\\
-  The Pinball counting model consists of considering the edges of the polygon filled by balls of very small radius, and determining the contacts and forces acting through these balls, applying the law of Force-Displacement of the Discrete Element  Method (DEM).
+  The development of a program capable of simulating the dynamics of rigid bodies uses some simplifications in order to solve this problem: we use the pinball algorithm to solve the contact problem and the time is discretized using the traditional Euler algorithm. As, in the real problem, the bodies are not actually rigid, we also have an error associated with this approximation, i.e., the structures do not deform when forces are applied to them. Furthermore, applied forces creates only rotational and translational movements in the object. Thus, after determining the center of mass and moment of inertia of each object, knowing the acting forces (external and contact forces), the resulting force and torque are calculated. This allows the calculation of the entire dynamics of the object, with the aid of a numerical integrator to solve the Euler's equations of motion.\\
+  To take the contact of different structures in consideration, the Pinball algorithm is used. In this algorithm, the edges of the rigid bodies are filled with discrete elements. These elements acts as contact units, transferring forces between rigid bodies and solving the contact problem.
 }
     %------------------------------------------------------
   
     % RESULTS TEXT AND FIGURE
     %------------------------------------------------------
     \setresults{
- Through the computational techniques cited and the application of physical concepts, it was possible to develop a program, using MATLAB, that simulated the dynamics of objects in two dimensions. For the validation of the program, the energy conservation and the conservation of the linear and angular moments of the system were analyzed. It was obtained a good approximation in the simulation of the dynamics of the objects, that shows fidelity to the physical concepts involved, however the smaller the increment of time used in the temporal integration, the better the results of the simulation.
+The computational techniques described in the methodology were implemented in MATLAB, generating a computational module capable of solving the dynamics and contacts of rigid bodies. For the validation of the program, the energy conservation and the conservation of the linear and angular moments of the system were analyzed. A good approximation was obtained in the simulation of the objects dynamics, showing that the physical concepts involved were correctly implemented. Moreover, the smaller the increment of time used in the temporal integration, the better the results of the simulation, as expected.
 }
     %------------------------------------------------------
      \setresultsfigure{ENERGIAS.jpg}{width=8cm}
